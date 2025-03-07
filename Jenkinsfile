@@ -27,7 +27,7 @@ pipeline {
                 script {
                     try {
                         sh 'echo $PATH'
-                        sh 'mvn --version'  // Check if Maven is accessible
+                        sh 'mvn --version'
                         sh 'mvn clean package'
                     } catch (Exception e) {
                         error "Build failed: ${e.message}"
